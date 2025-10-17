@@ -1,0 +1,60 @@
+/* Dropdown Button */
+
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 10px 14px;
+  min-width: 120px;
+  z-index: 1;
+border-bottom: 1px solid #2563eb; 
+}
+
+/* Buttons inside Dropdown */
+.dropdown-content button {
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+
+  border-bottom: 1px solid black; /* line under each item */
+}
+
+/* Remove border from last item so no extra line after completed */
+.dropdown-content button:last-child {
+  border-bottom: none;
+}
+
+
+.dropdown-content button:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+table#task-lists,
+table#task-lists th,
+table#task-lists td {
+  border: 1px solid #D1D5DB;
+  padding: 0.5rem 1rem;
+}
+
+table#task-lists {
+  border-collapse: collapse;
+  width: 100%;
+}

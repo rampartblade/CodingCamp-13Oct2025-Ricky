@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!--CSS External File-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--tailwind CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body style="height: 100vh;" class="grid h-50 place-items-center">
+        <header>
+            <div class="text-4xl font-bold text-blue-400 mb-6 tracking-wide text-center">
+                Todo List
+            </div>
+        </header>        
+            <main>
+                <section class="todo-app flex justify-between my-4">
+                    <input type="text" class="border rounded p-2 w-90" id="todo-input" placeholder="Add a new task..." />
+                    <input type="date" class="border rounded p-2 w-90" id="todo-date" placeholder="Select due date..." />
+                    <button id="add-task-button" class="bg-blue-500 text-white rounded p-3 w-15" onclick="addTask();">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </section>
+
+                <!-- Action Buttons Section -->
+                <section class="flex justify-between my-4">
+                    <div class="dropdown bg-blue-500 text-white rounded p-2 w-fit">
+                        <button onclick="toggleDropdown()" class="dropbtn">Filter</button>
+                        <div id="dropdownMenu" class="dropdown-content bg-blue-500 text-white rounded p-2 w-fit shadow-lg">
+                            <button onclick="filterTasks('All')">All</button>
+                            <button onclick="filterTasks('Pending')">Pending</button>
+                            <button onclick="filterTasks('Completed')">Completed</button>
+                        </div>
+                    </div>
+                    <button class="bg-blue-500 text-white rounded p-2 w-fit" onclick="deleteAllTasks();">Delete All Tasks</button>
+                </section>
+
+                <section>
+
+                </section>
+                <section class="my-4">
+                    <table class="table-auto w-full max-w-4xl mx-auto border border-gray-300 border-collapse shadow rounded">
+                        <thead>
+                            <tr class="bg-gray-200">
+                            <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Task</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Due Date</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Status</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="task-lists">
+                            <!-- rows inserted dynamically here -->
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        <footer>
+            <div class="font-semibold">
+                2025 Todo List Web
+            </div>
+        </footer>
+    
+    <!--Javascript External File-->
+    <script src="script.js"></script>  
+</body>
+</html>
